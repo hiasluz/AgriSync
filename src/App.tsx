@@ -662,19 +662,20 @@ export default function App() {
                           <table className="w-full text-[11px] text-left">
                             <thead className="bg-[#1C212E] sticky top-0 z-10 border-b border-white/5">
                               <tr>
-                                <th className="px-8 py-4 font-bold text-slate-500 uppercase tracking-widest">Schlag</th>
-                                <th className="px-8 py-4 font-bold text-amber-500/50 uppercase tracking-widest">Vorfrucht</th>
+                                <th className="px-6 py-4 font-bold text-slate-500 uppercase tracking-widest">Bezeichnung</th>
+                                <th className="px-6 py-4 font-bold text-slate-500 uppercase tracking-widest">Flurstück</th>
+                                <th className="px-6 py-4 font-bold text-slate-500 uppercase tracking-widest">Schlag</th>
+                                <th className="px-6 py-4 font-bold text-amber-500/50 uppercase tracking-widest text-right">Vorfrucht</th>
                               </tr>
                             </thead>
-                            <tbody className="divide-y divide-white/2">
+                            <tbody className="divide-y divide-white/5">
                               {group.flaechen.map((f, i) => (
                                 <tr key={i} className="hover:bg-white/[0.02] transition-colors">
-                                  <td className="px-8 py-5">
-                                    <div className="font-bold text-slate-200">{f.bezeichnung}</div>
-                                    <div className="text-[10px] font-mono text-slate-600 mt-1">ID: {f.schlag}</div>
-                                  </td>
-                                  <td className="px-8 py-5">
-                                    <div className="text-amber-400/80 bg-amber-400/5 px-3 py-1.5 rounded-lg border border-amber-400/10 font-bold">
+                                  <td className="px-6 py-4 font-semibold text-slate-300">{f.bezeichnung}</td>
+                                  <td className="px-6 py-4 font-mono text-slate-500">{f.flurstueck}</td>
+                                  <td className="px-6 py-4 text-slate-500">{f.schlag}</td>
+                                  <td className="px-6 py-4 text-right">
+                                    <div className="inline-block text-amber-400/80 bg-amber-400/5 px-3 py-1.5 rounded-lg border border-amber-400/10 font-bold">
                                        {f.kulturVJ || 'UNDEFINED'}
                                     </div>
                                   </td>
