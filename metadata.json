@@ -1,0 +1,9 @@
+{
+  "name": "AgriSync",
+  "description": "Ein Tool zum Abgleich von landwirtschaftlichen Flächendaten zwischen FIONA CSV-Exporten und dem Portal-Produktionsumgebung.",
+  "requestFramePermissions": [
+    "clipboard-read",
+    "clipboard-write"
+  ],
+  "majorCapabilities": []
+}
